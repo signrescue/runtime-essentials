@@ -2,28 +2,51 @@
 
 One-liner PowerShell scripts that drop portable CLI tools into your current directory. No installers, no PATH changes, no admin required.
 
-## Usage
+Open PowerShell, `cd` to where you want the tool, and paste:
 
-Open PowerShell, `cd` to where you want the tool, and run:
+### croc — secure peer-to-peer file transfer
 
-```powershell
-# File transfer
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-croc.ps1 | iex
+```
+
+### rclone — cloud storage Swiss army knife
+
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-rclone.ps1 | iex
+```
 
-# Media
+### FFmpeg — video/audio encoding, conversion, streaming
+
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-ffmpeg.ps1 | iex
+```
+
+### mpv — minimalist media player
+
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-mpv.ps1 | iex
+```
 
-# Scripting
+### Lua — lightweight scripting language
+
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-lua.ps1 | iex
+```
 
-# Compression
+### 7zr — standalone .7z extractor (single file, no DLL)
+
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-7zr.ps1 | iex
+```
+
+### 7-Zip — full standalone console (7za.exe + 7za.dll)
+
+```
 irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-7z.ps1 | iex
 ```
 
-Each script downloads the latest version, extracts only the binaries, and cleans up after itself.
+---
 
 ## What You Get
 
@@ -39,30 +62,9 @@ Each script downloads the latest version, extracts only the binaries, and cleans
 
 License files for each tool are placed in a `[tool]-legal/` subfolder alongside the binaries.
 
-## Dependencies
+## Notes
 
-- **PowerShell 5.1+** (ships with Windows 10/11)
-- **curl.exe** (ships with Windows 10/11) — used only by `get-lua.ps1` for SourceForge downloads
-- **mpv** requires a `.7z` extractor. `get-mpv.ps1` will look for `7zr.exe` in the current directory or PATH, and offer to download it if not found.
-
-All other scripts use `Expand-Archive` (built into PowerShell) and have zero external dependencies.
-
-## How It Works
-
-Each script:
-
-1. Creates a temp folder in `%TEMP%\atomic_bootstrap_[tool]`
-2. Downloads the latest release archive
-3. Extracts binaries into your current directory (or `-InstallPath`)
-4. Copies license/legal files into `[tool]-legal/`
-5. Removes the temp folder in a `finally` block — always cleans up, even on failure
-
-## Custom Install Path
-
-Every script accepts an `-InstallPath` parameter:
-
-```powershell
-.\get-croc.ps1 -InstallPath "C:\Tools"
-```
-
-When using `irm | iex`, the default is your current directory (`$PWD`).
+- **PowerShell 5.1+** and **Windows 10/11** required (all dependencies ship with the OS)
+- **mpv** needs a `.7z` extractor — `get-mpv.ps1` will offer to download `7zr.exe` if not found
+- Every script accepts `-InstallPath` to override the target directory
+- Each script cleans up its temp files in a `finally` block, even on failure
