@@ -1,4 +1,4 @@
-# win-portable-utils
+# zero-install-tool-drops
 
 One-liner PowerShell scripts that drop portable CLI tools into your current directory. No installers, no PATH changes, no admin required.
 
@@ -8,19 +8,19 @@ Open PowerShell, `cd` to where you want the tool, and run:
 
 ```powershell
 # File transfer
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-croc.ps1 | iex
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-rclone.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-croc.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-rclone.ps1 | iex
 
 # Media
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-ffmpeg.ps1 | iex
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-mpv.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-ffmpeg.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-mpv.ps1 | iex
 
 # Scripting
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-lua.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-lua.ps1 | iex
 
 # Compression
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-7zr.ps1 | iex
-irm https://raw.githubusercontent.com/signrescue/win-portable-utils/main/get-7z.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-7zr.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-7z.ps1 | iex
 ```
 
 Each script downloads the latest version, extracts only the binaries, and cleans up after itself.
