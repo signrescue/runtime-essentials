@@ -1,0 +1,9 @@
+# Downloaded binaries (output of the scripts)
+*.exe
+*.dll
+
+# Legal folders (output of the scripts)
+*-legal/
+
+# Claude Code settings
+.claude/
