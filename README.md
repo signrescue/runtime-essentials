@@ -1,10 +1,10 @@
 # runtime-essentials
 
-A curated collection of **portable Windows executables** frequently used across organization projects. These are your go-to tools, ready to grab on demand.
+A curated collection of portable Windows executables ready to grab on demand.
 
 ## Purpose
 
-This repository provides **a la carte access** to essential tools that multiple projects may need. Each tool can be installed or updated with a single copy-paste PowerShell command (`irm ... | iex`), making setup simple and repeatable.
+This repository provides **a la carte access** to essential tools. Each can be installed or updated with a single copy-paste PowerShell command (`irm ... | iex`), making setup simple and repeatable. Package managers use unpredictable release versions and opaque storage locations. We just want the pre-compiled binaries to be available when and where we need them.
 
 > Note: This is not a toolkit or framework—just a curated set of utilities for convenience and consistency.
 
@@ -72,6 +72,7 @@ License files for each tool are placed in a `[tool]-legal/` subfolder alongside 
 
 ## Notes
 
+- All scripts fetch **x86_64 (64-bit)** binaries, which run on the vast majority of Windows machines. ARM64 builds are not currently provided.
 - **PowerShell 5.1+** and **Windows 10/11** required (all dependencies ship with the OS)
 - **mpv** needs a `.7z` extractor — `get-mpv.ps1` will offer to download `7zr.exe` if not found
 - Every script accepts `-InstallPath` to override the target directory
