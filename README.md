@@ -1,49 +1,57 @@
-# zero-install-tool-drops
+# runtime-essentials
 
-One-liner PowerShell scripts that drop portable CLI tools into your current directory. No installers, no PATH changes, no admin required.
+A curated collection of **portable Windows executables** frequently used across organization projects. These are your go-to tools, ready to grab on demand.
 
-Open PowerShell, `cd` to where you want the tool, and paste:
+## Purpose
+
+This repository provides **a la carte access** to essential tools that multiple projects may need. Each tool can be installed or updated with a single copy-paste PowerShell command (`irm ... | iex`), making setup simple and repeatable.
+
+> Note: This is not a toolkit or framework—just a curated set of utilities for convenience and consistency.
+
+## Usage
+
+Open PowerShell, `cd` to where you want the tool, and paste the command for the tool you need.
 
 ### croc — secure peer-to-peer file transfer
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-croc.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-croc.ps1 | iex
 ```
 
 ### rclone — cloud storage Swiss army knife
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-rclone.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-rclone.ps1 | iex
 ```
 
 ### FFmpeg — video/audio encoding, conversion, streaming
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-ffmpeg.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-ffmpeg.ps1 | iex
 ```
 
 ### mpv — minimalist media player
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-mpv.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-mpv.ps1 | iex
 ```
 
 ### Lua — lightweight scripting language
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-lua.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-lua.ps1 | iex
 ```
 
 ### 7zr — standalone .7z extractor (single file, no DLL)
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-7zr.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-7zr.ps1 | iex
 ```
 
 ### 7-Zip — full standalone console (7za.exe + 7za.dll)
 
 ```
-irm https://raw.githubusercontent.com/signrescue/zero-install-tool-drops/main/get-7z.ps1 | iex
+irm https://raw.githubusercontent.com/signrescue/runtime-essentials/main/get-7z.ps1 | iex
 ```
 
 ---
